@@ -1,0 +1,15 @@
+.widget-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.widget-item {
+    width: calc(33% - 48px);
+    height: 200px;
+    border: 1px solid #c6c6c6;
+    margin-right: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: #fff;
+    padding: 8px;
+}
