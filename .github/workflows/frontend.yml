@@ -7,15 +7,12 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.19.1]
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 12.19.1
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.19.1
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "Installing node packages..."
       - run: npm i
@@ -28,15 +25,12 @@ jobs:
       - run: echo "lint:hbs completed"
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.19.1]
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 12.19.1
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.19.1
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "Installing node packages..."
       - run: npm i
